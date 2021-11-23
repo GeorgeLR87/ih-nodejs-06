@@ -4,8 +4,10 @@
 const mongoose 		= require("mongoose")
 const Book			= require("./../models/Book")
 
+require("dotenv").config()
+
 // 2. CONEXIÓN A BD
-mongoose.connect("mongodb+srv://George87lr:870518jlrg@cluster0.a4ljm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
@@ -29,7 +31,7 @@ const books = [
 	{
 	  title: "To Kill a Mockingbird",
 	  description:
-		"To Kill a Mockingbird takes place in the fictional town of Maycomb, Alabama, during the Great Depression. The protagonist is Jean Louise (Scout) Finch, an intelligent though unconventional girl who ages from six to nine years old during the course of the novel. She is raised with her brother, Jeremy Atticus (Jem), by their widowed father, Atticus Finch. He is a prominent lawyer who encourages his children to be empathetic and just. He notably tells them that it is a sin to kill a mockingbird, alluding to the fact that the birds are innocent and harmless.",
+		"To Kill a Mockingbird takes place in the fictional town of Maycomb, Alabama, during the Great Depression. The protagonist is Jean Louise ("Scout") Finch, an intelligent though unconventional girl who ages from six to nine years old during the course of the novel. She is raised with her brother, Jeremy Atticus ("Jem"), by their widowed father, Atticus Finch. He is a prominent lawyer who encourages his children to be empathetic and just. He notably tells them that it is "a sin to kill a mockingbird," alluding to the fact that the birds are innocent and harmless.",
 	  author: "Harper Lee",
 	  rating: 8
 	},
