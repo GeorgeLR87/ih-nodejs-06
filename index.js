@@ -1,7 +1,6 @@
 // 1. IMPORTACIONES
 const express 		= require("express")
 const app			= express()
-
 const hbs			= require("hbs")
 
 const connectDB		= require("./config/db")

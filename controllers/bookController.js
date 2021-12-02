@@ -35,10 +35,10 @@ exports.createBook = async (req, res) => {
 
 	console.log(req.body)
 
-	const title = req.body.title
-	const author = req.body.author
+	const title       = req.body.title
+	const author      = req.body.author
 	const description = req.body.description
-	const rating = req.body.rating
+	const rating      = req.body.rating
 
 	const newBookCreated = await Book.create({title, author, description, rating})
 
